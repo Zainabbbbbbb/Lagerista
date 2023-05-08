@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Therapyrooms by Ahmed Zainab</title>
+    <th:block th:include="masterpage/masterpage.html :: assets"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="therapyrooms/therapyrooms.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/therapyrooms/therapyrooms.js"></script>
+</head>
+
+<body class="bg-light">
+<div th:replace="/masterpage/masterpage.html :: menu"/>
+    <div class="container">
+        <main>
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="/therapyrooms/arztpraxis.jpg" alt="" width="200" height="150">
+                <h2>Materialien hinzufügen</h2>
+
+                <a type="button" class="w-100 btn btn-primary btn-lg" href="/admin/materialien" >Material hinzufügen</a>
+                <a type="button" class="w-100 btn btn-primary btn-lg" href="/admin/information" >i</a>
+
+                <table class="table table-striped" style="margin-bottom: 100px;margin-top: 50px;">
+                    <thead>
+                    <tr>
+                        <td>Materialname</td>
+                        <td>Materialgroese</td>
+                        <td>Farbe</td>
+                    </tr>
+                    </thead>
+                    <tbody id="therapy_list"></tbody>
+                </table>
+                </div><br><br><br><br><br><br><br>
+
+        </main>
+    </div>
+
+
+<section th:replace="/masterpage/masterpage.html :: footer"/>
+</body>
+
+</html>

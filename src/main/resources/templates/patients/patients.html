@@ -1,0 +1,27 @@
+<!--
+    Created: 2022-12-10
+    Author: Rudolf Radlbauer
+
+    Description:
+    ============
+    This is currently only a sample page
+    may be entirely replaced
+-->
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Patients</title>
+        <th:block th:include="masterpage/masterpage.html :: assets"/>
+    </head>
+
+    <body>
+        <div th:replace="/masterpage/masterpage.html :: menu"/>
+        <div class="container">
+            <h1>Patients list</h1>
+        </div>
+    </body>
+<section th:replace="/masterpage/masterpage.html :: footer"/>
+</html>

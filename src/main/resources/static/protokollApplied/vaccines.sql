@@ -1,0 +1,17 @@
+INSERT INTO coding VALUES (1, 'Covid-19 Vaccine', 'Negative', 'https://snomed.info/sct');
+INSERT INTO coding VALUES (2, 'Pnemococcus Vaccine', 'Positive', 'https://www.gesundheit.gv.at/krankheiten/immunsystem/coronavirus-covid-19/diagnose-verdacht.html');
+INSERT INTO coding VALUES (3, 'Phnemococcus', 'Negative', 'https://snomed.info/sct');
+INSERT INTO coding VALUES (4, 'FSME', 'Positive', 'https://fsmeuganda.org/about-fsme/');
+INSERT INTO disease_target VALUES (1, 'Pnemococcus', 1);
+INSERT INTO disease_target VALUES (2, 'Covid-19', 2);
+INSERT INTO disease_target VALUES (3, 'Pnemococcus', 3);
+INSERT INTO disease_target VALUES (4, 'Frühsommer-Meningoenzephalitis', 4);
+INSERT INTO dose VALUES (1, 12, '12 ml');
+INSERT INTO dose VALUES (3, 001, '0.1 ml');
+INSERT INTO dose VALUES (2, 2, '2ml');
+INSERT INTO series_doses VALUES (1, 1, '1 Version');
+INSERT INTO series_doses VALUES (2, 5, '5 Version');
+INSERT INTO protokoll_applied VALUES (1, 'Pfizer', 'MRNA Covid Vaccines', 1, 1, 1);
+INSERT INTO protokoll_applied VALUES (2, 'J&J', 'Phnemococcus Vaccines', 2, 1, 2);
+INSERT INTO protokoll_applied VALUES (3, 'Bayer', 'Phnemococcus Vaccines', 2, 1, 3);
+INSERT INTO protokoll_applied VALUES (4, 'Bayer', 'FSME Vaccines', 1, 2, 4);

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Materialien hinzufügen</title>
+    <th:block th:include="masterpage/masterpage.html :: assets"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/therapyrooms/therapyrooms.js"></script>
+</head>
+
+<body class="bg-light">
+<div th:replace="/masterpage/masterpage.html :: menu"/>
+<div class="container">
+    <main>
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="/therapyrooms/arztpraxis.jpg" alt="" width="200" height="150">
+            <a type="button" class="w-100 btn btn-primary btn-lg" href="/admin/therapyrooms" >Liste anzeigen</a>
+            <h2>Materialien hinzufügen</h2>
+
+            <div class="col-md-7 col-lg-8">
+                <label  class="form-label">Materialart</label>
+                <input type="text" class="form-control" id="raumname" placeholder="" required>
+                <div class="invalid-feedback">
+                    (C1.06)
+                </div>
+            </div><br><br><br><br>
+
+            <div class="col-md-3">
+                <label  class="form-label">Materialgröße</label>
+                <input type="text" class="form-control"  id="raumgroese" placeholder="" required>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div><br><br><br><br>
+
+        <div class="col-md-5">
+
+            <div class="col-12">
+                <label  class="form-label">Farbe <span class="text-muted">(Optional)</span></label>
+                <input type="text" class="form-control"   id="sonstiges" placeholder="Farbe">
+            </div>
+            <hr class="my-4">
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="same-address">
+                <label class="form-check-label" for="same-address">Kupfer </label>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="save-info">
+                <label class="form-check-label" for="save-info">Aluminium</label>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="save-info3">
+                <label class="form-check-label" for="save-info3">Edelstahl</label>
+            </div>
+
+            <hr class="my-4">
+            <button class="w-100 btn btn-primary btn-lg" onclick="save()">Raum hinzufügen</button>
+            </form>
+        </div><br><br><br><br><br><br><br>
+    </main>
+</div>
+
+<section th:replace="/masterpage/masterpage.html :: footer"/>
+</body>
+
+</html>

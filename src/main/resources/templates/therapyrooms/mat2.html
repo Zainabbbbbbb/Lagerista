@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Materialien hinzufügen</title>
+    <th:block th:include="masterpage/masterpage.html :: assets"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/therapyrooms/therapyrooms.js"></script>
+</head>
+
+<body class="bg-light">
+<div th:replace="/masterpage/masterpage.html :: menu"/>
+<div class="container">
+    <main>
+        <h2>Material 2</h2>
+        <div class="py-5 text-center">
+            <a type="button" class="w-100 btn btn-primary btn-lg" href="/admin/therapyrooms" >Liste anzeigen</a>
+        </div><br><br><br><br><br><br><br>
+    </main>
+</div>
+
+<section th:replace="/masterpage/masterpage.html :: footer"/>
+</body>
+
+</html>

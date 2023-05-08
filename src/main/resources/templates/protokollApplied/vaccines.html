@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Vaccines</title>
+    <th:block th:include="masterpage/masterpage.html :: assets"/>
+    <script src="/protokollApplied/vaccines.js"></script>
+
+
+</head>
+<body>
+<div th:replace="/masterpage/masterpage.html :: menu"/>
+
+<div class="container" >
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <td>Series</td>
+            <td>Authority</td>
+            <td>Dose</td>
+            <td>Desease</td>
+            <td>Code</td>
+            <td>Display</td>
+            <td>Version</td>
+        </tr>
+        </thead>
+        <tbody id="vaccinelist"></tbody>
+    </table>
+</div>
+
+<a type="button" class="btn btn-outline-primary" href="/doctor/vaccines/add" >New Vaccine</a>
+<section th:replace="/masterpage/masterpage.html :: footer"/>
+</body>
+</html>

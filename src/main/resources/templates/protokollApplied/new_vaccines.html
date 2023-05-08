@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>New Vaccines</title>
+    <th:block th:include="masterpage/masterpage.html :: assets"/>
+    <script src="/protokollApplied/new_vaccines.js"></script>
+</head>
+<body>
+<div th:replace="/masterpage/masterpage.html :: menu"/>
+<br>
+<br>
+<div class="container">
+
+    <div class="input-group mb-3">
+        <span class="input-group-text">Series</span>
+        <input id="series" type="text" class="form-control" >
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" >Authority</span>
+        <input id="authority" type="text" class="form-control" >
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" >Dose</span>
+        <input id="dose" type="text" class="form-control" >
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" >Desease</span>
+        <input id="desease" type="text" class="form-control" >
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" >Code</span>
+        <input id="code" type="text" class="form-control" >
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" >Display</span>
+        <input id="display" type="text" class="form-control" >
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" >Version</span>
+        <input id="version" type="text" class="form-control" >
+    </div>
+    <button type="button" class="btn btn-outline-primary" onclick="save()">Submit</button>
+    <a type="button" class="btn btn-outline-primary" href="/doctor/vaccines" >Back</a>
+</div>
+<section th:replace="/masterpage/masterpage.html :: footer"/>
+</body>
+</html>
