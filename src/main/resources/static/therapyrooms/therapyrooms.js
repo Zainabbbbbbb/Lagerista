@@ -15,6 +15,10 @@ async function save()
     if (response.ok) document.location.reload();
     else alert ("Error: "+response.status);
 }
+async function rechne()
+{
+
+}
 
 
 async function deleteUser(mname){

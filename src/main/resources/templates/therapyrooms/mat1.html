@@ -21,6 +21,19 @@
         <label  class="form-label">Stückanzahl zur Kostenberechnung</label>
         <input type="int" class="form-control" id="stk" placeholder="" required>
 
+        <form action="/action_page.php"
+              oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+
+            <input type="range" id="a" name="a" value="50">
+
+            <input type="number" id="b" name="b" value="50">
+
+            <output name="x" for="a+b"></output>
+            <br><br>
+            <input type="submit">
+        </form>
+
+        <button type ="button" class="w-100 btn btn-primary btn-lg" onclick="rechne()">berechnen</button>
         <div class="py-5 text-center">
             <a type="button" class="w-100 btn btn-primary btn-lg" href="/admin/therapyrooms" >Liste anzeigen</a>
         </div><br><br><br><br><br><br><br>
