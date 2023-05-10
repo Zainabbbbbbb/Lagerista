@@ -12,26 +12,24 @@
     <script src="/therapyrooms/therapyrooms.js"></script>
 </head>
 
-<body class="bg-light">
+<body>
+
 <div th:replace="/masterpage/masterpage.html :: menu"/>
-<div class="container">
-    <main>
-        <h2>Baustahl</h2>
-        <p>Hier wird der ganze Text formatiert stehen ber Baustahl</p>
-        <label  class="form-label">Stückanzahl zur Kostenberechnung</label>
-        <form oninput = "d.value = stk.valueAsNumber * 2">
-            <input type = "number" class="form-conrol" id = "stk">
-            <!--<input type = "number" id = "f">--> Stück kosten
-            <output name = "d" for = "stk ">___</output>€
-        </form>
-
-        <div class="py-5 text-center">
-            <a type="button" class="w-100 btn btn-primary btn-lg" href="/admin/therapyrooms" >Liste anzeigen</a>
-        </div><br><br><br><br><br><br><br>
-    </main>
-</div>
-
+    <div class="container">
+        <main>
+            <h2>Baustahl</h2>
+            <p>Hier wird der ganze Text formatiert stehen über Aluminium</p>
+            <label class="form-label">Stückanzahl zur Kostenberechnung</label>
+            <form oninput="d.value = stk.valueAsNumber * 2">
+                <input type="number" class="form-conrol" id="stk">
+                <!--<input type="number" id="f">--> Stück kosten
+                <output name="d" for="stk" style="display: inline;">___</output>€
+            </form>
+            <div class="py-5 text-center">
+                <a type="button" class="w-100 btn btn-primary btn-lg" href="/admin/therapyrooms">Liste anzeigen</a>
+            </div>
+        </main>
+    </div>
 <section th:replace="/masterpage/masterpage.html :: footer"/>
 </body>
-
 </html>
