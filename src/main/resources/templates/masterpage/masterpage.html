@@ -29,32 +29,33 @@
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
+        <link rel="stylesheet" type="text/css" href="therapyrooms/therapyrooms.css"/>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </th:block>
 </head>
 <body>
-    <div th:fragment="menu" style="background-color: #1908a2;">
+    <div th:fragment="menu" style="background-color: #0d4db4;">
         <nav class="navbar navbar-inverse">
-            <div class="container-fluid" style="background-color: #1908a2;">
-                <div class="navbar-header" style="background-color: #1908a2;">
+            <div class="container-fluid" style="background-color: #0d4db4;">
+                <div class="navbar-header" style="background-color: #0d4db4;">
                     <a class="navbar-brand" href="/">Lagerista</a>
                 </div>
 
                 <!--------------- menu items for all users (public) ---------------->
-                <ul class="nav navbar-nav" style="background-color: #1908a2;">
-                    <li class="active"><a href="/public/welcome" style="background-color: #1908a2;">Home</a></li>
+                <ul class="nav navbar-nav" style="background-color: #0d4db4;">
+                    <li class="active"><a href="/public/welcome" style="background-color: #0d4db4;">Home</a></li>
                 </ul>
                 <!--------------- menu items for admins ---------------->
                 <ul class="nav navbar-nav" sec:authorize="hasRole('ADMIN')">
-                    <li><a href="/admin/users">Users</a></li>
-                    <li><a href="/admin/symptomlist">Symptoms</a></li>
-                    <li><a href="/admin/therapyrooms">Therapyrooms</a></li>
+                    <li class="active"><a href="/admin/therapyrooms" style="background-color: #0d4db4;">Lagerbestand</a></li>
+                    <li class="active"><a href="/admin/information" style="background-color: #0d4db4;">Lagerinfo</a></li>
+                    <li class="active" ><a href="/admin/users"style="background-color: #0d4db4;" >Users</a ></li>
                 </ul>
-                <!--------------- menu items for doctors ---------------->
+                <!--------------- menu items for doctors ----------------
                 <ul class="nav navbar-nav" sec:authorize="hasRole('DOCTOR')">
                     <li><a href="/doctor/patients">Patients</a></li>
                     <li><a href="/doctor/vaccines">Vaccines</a></li>
-                </ul>
+                </ul> -->
                 
                 <!--------------- menu items for login ---------------->
                 <ul class="nav navbar-nav navbar-right" sec:authorize="!isAuthenticated">
@@ -68,9 +69,9 @@
     </div>
 
     <section class="navbar navbar-fixed-bottom" th:fragment="footer">
-        <div class="container-fluid">
+        <div  style="background-color: #ffdcba;">
             <hr/>
-            <h2>&copy; 4AHBGM</h2>
+            <font color="black" size="5" style="padding-left: 1%">   Lagerista</font>
         </div>
     </section>
 

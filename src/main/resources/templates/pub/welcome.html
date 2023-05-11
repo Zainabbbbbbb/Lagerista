@@ -9,16 +9,39 @@
 
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="UTF-8">
-        <title>Welcome</title>
-        <th:block th:include="masterpage/masterpage.html :: assets"/>
-    </head>
-    <body>
-        <div th:replace="/masterpage/masterpage.html :: menu"/>
-        <div class="container">
-            <h1>Welcome</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Wilkommen</title>
+    <th:block th:include="masterpage/masterpage.html :: assets"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/therapyrooms/therapyrooms.js"></script>
+</head>
+
+<body>
+<div th:replace="/masterpage/masterpage.html :: menu"/>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <h1 class="text-primary mb-3">Wilkommen in Lagerista</h1>
+            <br>
+            <p class="lead mb-5">Willkommen bei Lagerista - Ihrer Lösung für die Lagerbestandsverwaltung!
+                Mit Lagerista können Sie Ihre Lagerbestände einfach und effizient verwalten, um sicherzustellen,
+                dass Sie immer genügend Waren auf Lager haben, um die Nachfrage Ihrer Kunden zu erfüllen.<br><br>
+                Unser benutzerfreundliches System ermöglicht es Ihnen, Ihre Lagerbestände in Echtzeit zu verfolgen,
+                Bestellungen und Lieferungen zu verwalten und Berichte zu generieren, um den Überblick über Ihren Lagerbestand zu behalten.<br><br>
+                Wir sind stolz darauf, Ihnen eine Lösung für Ihre Lagerbestandsverwaltung
+                anzubieten und freuen uns darauf, mit Ihnen zusammenzuarbeiten, um Ihr Lagermanagement auf die nächste Stufe zu bringen.</p>
+            <a href="/public/login" class="btn btn-lg btn-primary">Login</a>
         </div>
-        <section th:replace="/masterpage/masterpage.html :: footer"/>
-    </body>
+        <div class="col-md-6 text-center">
+            <br><br>
+            <img src="/therapyrooms/FerolaserXLagerista.png" class="img-fluid" alt="Wilkommen Image">
+        </div>
+    </div>
+</div>
+<section th:replace="/masterpage/masterpage.html :: footer"/>
+</body>
 </html>
