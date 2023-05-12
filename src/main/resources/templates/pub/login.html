@@ -26,17 +26,17 @@
     </div>
     <div class="container">
         <form class="form-signin" th:action="@{login}" method="post">
-            <h2 class="form-signin-heading">Bitte medlen Sie sich an</h2>
+            <h2 class="form-signin-heading">Bitte melden Sie sich an</h2>
             <p>
-                <label for="username" class="sr-only">Username</label>
+                <label for="username" class="sr-only">Benutzername</label>
                 <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
             </p>
             <p>
-                <label for="password" class="sr-only">Password</label>
+                <label for="password" class="sr-only">Passwort</label>
                 <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
             </p>
             <input name="_csrf" type="hidden" value="84bdff60-068e-4716-95b7-92c6770043c3" />
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Anmelden</button>
         </form>
         <section th:replace="/masterpage/masterpage.html :: footer"/>
     </div>
