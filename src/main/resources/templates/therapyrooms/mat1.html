@@ -15,33 +15,49 @@
 <body>
 
 <div th:replace="/masterpage/masterpage.html :: menu"/>
-    <div class="container">
-        <main>
+
+
+<div class="container">
+    <main>
+        <div class="text-center">
             <h2>Baustahl</h2>
-            <div class="py-8 text-center">
-            <p>Baustahl ist ein unverzichtbares Material in der Baubranche.
-                In der Belchindustrie wird Baustahl aufgrund seiner hohen Festigkeit und Flexibilität eingesetzt.
-                Er bildet die Grundlage für stabile Trägerkonstruktionen, die eine sichere und effiziente Verarbeitung von
-                Blechen ermöglichen. Baustahl gewährleistet somit die Qualität und Langlebigkeit von
-                belchindustriellen Strukturen.
-            </p>
-            </div>
-            <div class="py-4 text-center">
-                <img class="d-block mx-auto mb-3" src="/therapyrooms/Laserschneiden.png" alt="" width="370" height="250">
-            </div>
-            <p>Max. Laserleistung: 4000 W
-                Max. Blechdicke für Baustahl: 20 mm</p>
-            <label class="form-label">Stückanzahl zur Kostenberechnung </label>
+            <p class="lead">Baustahl ist ein unverzichtbares Material in der Baubranche. In der Belchindustrie wird Baustahl aufgrund seiner hohen Festigkeit und Flexibilität eingesetzt. Er bildet die Grundlage für stabile Trägerkonstruktionen, die eine sichere und effiziente Verarbeitung von Blechen ermöglichen. Baustahl gewährleistet somit die Qualität und Langlebigkeit von belchindustriellen Strukturen.</p>
+        </div>
+
+        <div class="text-center my-4">
+            <img class="img-fluid" src="/therapyrooms/Laserschneiden.png" alt="Laserschneiden">
+        </div>
+
+        <div class="text-center">
+            <p>Max. Laserleistung: 4000 W</p>
+            <p>Max. Blechdicke für Baustahl: 20 mm</p>
+        </div>
+
+        <div class="text-center my-4">
+            <label for="stk" class="form-label">Stückanzahl zur Kostenberechnung</label>
             <form oninput="d.value = stk.valueAsNumber * 2">
-                <input type="number" class="form-conrol" id="stk">
+                <input type="number" class="form-control" id="stk">
                 <!--<input type="number" id="f">--> Stück kosten
                 <output name="d" for="stk" style="display: inline;">___</output>€
             </form>
-            <div class="py-5 text-center">
-                <a type="button" class="w-100 btn btn-primary btn-lg" href="/admin/therapyrooms">Liste anzeigen</a>
-            </div>
-        </main>
-    </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="text-center mt-5">
+            <a href="/admin/therapyrooms" class="btn btn-primary btn-lg">Liste anzeigen</a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </main>
+</div>
+
+
 <section th:replace="/masterpage/masterpage.html :: footer"/>
 </body>
 </html>
