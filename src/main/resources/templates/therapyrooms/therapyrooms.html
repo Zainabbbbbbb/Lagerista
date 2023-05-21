@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Therapyrooms by Ahmed Zainab</title>
+    <title>Übersicht</title>
     <style>
         body {
             background-color: black; /* Hintergrundfarbe einstellen */
@@ -55,8 +55,81 @@
                         <td><b>Fläche</b></td>
                 </tr>
                 </thead>
-                <tbody id="therapy_list"></tbody>
+                <tbody id="therapy_list">
+                </tbody>
             </table>
+            <script>
+                // AJAX-Anfrage, um Daten von der API abzurufen
+                $.ajax({
+                    url: "/api/therapyrooms", // Pfad zur API
+                    method: "GET",
+                    success: function(response) {
+                        var entries = response; // Annahme: Die API antwortet mit einem Array von Einträgen
+
+                        generateEntries(entries);
+                    },
+                    error: function(xhr, status, error) {
+                        console.log("Fehler beim Abrufen der Daten:", error);
+                    }
+                });
+
+                // Funktion zum Generieren der Einträge und der "Delete"-Buttons
+                function generateEntries(entries) {
+                    var tbody = document.getElementById("therapy_list");
+
+                    entries.forEach(function(entry) {
+                        var row = document.createElement("tr");
+                        var nameCell = document.createElement("td");
+                        var deleteCell = document.createElement("td");
+                        var deleteButton = document.createElement("button");
+
+                        nameCell.textContent = entry.name;
+                        deleteButton.textContent = "Delete";
+                        deleteButton.classList.add("btn", "btn-danger", "btn-sm");
+                        deleteButton.onclick = function() {
+                            deleteEntry(entry.id);
+                        };
+
+                        deleteCell.appendChild(deleteButton);
+                        row.appendChild(nameCell);
+                        row.appendChild(deleteCell);
+                        tbody.appendChild(row);
+                    });
+                }
+
+                // Funktion zum Löschen eines Eintrags
+                function deleteEntry(entryId) {
+                    // Hier kannst du den entsprechenden Eintrag löschen
+                    // ...
+
+                    // Beispiel: Aktualisiere die Tabelle nach dem Löschen
+                    // AJAX-Anfrage zum Aktualisieren der Einträge
+                    $.ajax({
+                        url: "/api/therapyrooms/delete/" + entryId, // Pfad zur API zum Löschen des Eintrags
+                        method: "DELETE",
+                        success: function(response) {
+                            // Erfolgreiche Löschung
+                            // Aktualisiere die Tabelle
+                            // AJAX-Anfrage zum Abrufen der aktualisierten Einträge
+                            $.ajax({
+                                url: "/api/therapyrooms", // Pfad zur API zum Abrufen der Einträge
+                                method: "GET",
+                                success: function(response) {
+                                    var entries = response; // Annahme: Die API antwortet mit einem Array von Einträgen
+
+                                    generateEntries(entries);
+                                },
+                                error: function(xhr, status, error) {
+                                    console.log("Fehler beim Abrufen der Daten:", error);
+                                }
+                            });
+                        },
+                        error: function(xhr, status, error) {
+                            console.log("Fehler beim Löschen des Eintrags:", error);
+                        }
+                    });
+                }
+            </script>
         </div>
         <br><br><br><br><br><br><br>
     </main>
