@@ -21,6 +21,12 @@
             height: 100%;
             z-index: -1;
         }
+        h1 {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-size: 36px;
+            color: #333;
+
+        }
     </style>
 
     <th:block th:include="masterpage/masterpage.html :: assets"/>
@@ -36,6 +42,7 @@
 <div class="container">
     <main>
         <div class="py-5 text-center">
+            <h1>Lagerbestand - Übersicht</h1>
             <br>
             <br>
             <a type="button" class="w-100 btn btn-primary btn-lg" href="/admin/materialien" >Material hinzufügen</a>
@@ -44,8 +51,8 @@
                 <thead>
                 <tr>
                         <td><b>Materialname</b></td>
-                        <td><b>Materialgroese</b></td>
-                        <td><b>Materialfarbe</b></td>
+                        <td><b>Materialdicke</b></td>
+                        <td><b>Fläche</b></td>
                 </tr>
                 </thead>
                 <tbody id="therapy_list"></tbody>
